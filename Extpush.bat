@@ -1,6 +1,4 @@
-git clone https://github.com/watermelonma/deadpooldata
-git clone https://github.com/watermelonma/deadpoolscripts
-sqlcmd -i c:\dp\dp.sql -o c:\dp\deadpooldata\1.csv -s, -W
+sqlcmd -i c:\dp\deadpoolscripts\dp.sql -o c:\dp\deadpooldata\1.csv -s, -W
 findstr /v /c:"---" c:\dp\deadpooldata\1.csv > c:\dp\deadpooldata\2.csv 
 findstr /v /c:"bottle" c:\dp\deadpooldata\2.csv > c:\dp\deadpooldata\3.csv 
 findstr /v /c:"Changed database context to 'ToniqDatabase'." c:\dp\deadpooldata\3.csv > c:\dp\deadpooldata\x.csv 
@@ -16,4 +14,5 @@ git commit -am "Daily update"
 git push -u origin master 
 git config --global credential.helper store
 cd .. 
-rmdir deadpooldata /s /q & pause
+rmdir deadpooldata /s /q 
+rmdir deadpoolscripts /s /q& pause
