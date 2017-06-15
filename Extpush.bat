@@ -15,4 +15,4 @@ git push -u origin master
 git config --global credential.helper store
 cd .. 
 rmdir deadpooldata /s /q 
-rmdir deadpoolscripts /s /q& pause
+rmdir deadpoolscripts /s /q
