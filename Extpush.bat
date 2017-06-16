@@ -13,8 +13,6 @@ git checkout master
 git add .
 git commit -am "Daily update"
 git push -u origin master 
-Username for 'https://github.com': <deadpooldata>
-Password for 'https://deadpooldata@github.com': <qw3rtyui>
 cd .. 
 rmdir deadpooldata /s /q 
 rmdir deadpoolscripts /s /q
