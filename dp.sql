@@ -23,4 +23,4 @@ and (getdate() - 1095) < cast(stockCard.LastSaleDate as datetime)
 and stockCard.SOH between 0.001 and 1000
 and stockPoint.name like '%DISP'
 and drug.AverageWholeSalePrice >= 100
-order by drug.AverageWholeSalePrice DESC
+order by [SOH Value] DESC
