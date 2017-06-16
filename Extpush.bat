@@ -7,8 +7,6 @@ del /f 1.csv, 2.csv, 3.csv
 git config --global user.email "deadpooldata@gmail.com"
 git config --global user.name "deadpooldata"
 git config --global credential.helper store
-Username for 'https://github.com': <deadpooldata>
-Password for 'https://deadpooldata@github.com': <qw3rtyui>
 git init
 git remote add origin git@github.com:watermelonma/deadpooldata.git
 git checkout master
