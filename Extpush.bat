@@ -1,8 +1,8 @@
-sqlcmd -i c:\dp\deadpoolscripts\dp.sql -o c:\dp\deadpooldata\1.csv -s, -W
-findstr /v /c:"---" c:\dp\deadpooldata\1.csv > c:\dp\deadpooldata\2.csv 
-findstr /v /c:"bottle" c:\dp\deadpooldata\2.csv > c:\dp\deadpooldata\3.csv 
-findstr /v /c:"Changed database context to 'ToniqDatabase'." c:\dp\deadpooldata\3.csv > c:\dp\deadpooldata\x.csv 
-cd C:\dp\deadpooldata
+sqlcmd -i c:\Program Files\dp\deadpoolscripts\dp.sql -o c:\Program Files\dp\deadpooldata\1.csv -s, -W
+findstr /v /c:"---" c:\Program Files\dp\deadpooldata\1.csv > c:\Program Files\dp\deadpooldata\2.csv 
+findstr /v /c:"bottle" c:\Program Files\dp\deadpooldata\2.csv > c:\Program Files\dp\deadpooldata\3.csv 
+findstr /v /c:"Changed database context to 'ToniqDatabase'." c:\Program Files\dp\deadpooldata\3.csv > c:\Program Files\dp\deadpooldata\x.csv 
+cd C:\Program Files\dp\deadpooldata
 del /f 1.csv, 2.csv, 3.csv
 git config --global user.email "deadpooldata@gmail.com"
 git config --global user.name "deadpooldata"
