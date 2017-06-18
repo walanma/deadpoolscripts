@@ -1,11 +1,7 @@
 USE [ToniqDatabase]
 SET NOCOUNT ON
 select
-	CASE stockPoint.Name 
-		WHEN 'UNICHEM-DISP' THEN 'Unichem St. Lukes'
-		WHEN 'LIFE-DISP' THEN 'Life St. Lukes'
-		ELSE 'Unknown'  
-	END as [Store Name],
+	stockPoint.Name as [Store Name],
 	drug.BrandName as [Brand],
 	drug.GenericName as [Generic Name],
 	drug.Strength as [Strength],
