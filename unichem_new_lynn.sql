@@ -22,4 +22,5 @@ where (getdate() - 180) > cast(stockCard.LastSaleDate as datetime)
 and (getdate() - 1095) < cast(stockCard.LastSaleDate as datetime)
 and stockCard.SOH between 0.001 and 1000
 and drug.AverageWholeSalePrice >= 100
+and stockPoint.name like 'Disp%'
 order by [SOH Value] DESC
