@@ -1,7 +1,11 @@
 USE [ToniqDatabase]
 SET NOCOUNT ON
 select
-	stockPoint.Name as [Store Name],
+	CASE stockPoint.Name 
+		WHEN 'Dispensary' THEN 'Unichem New Lynn'
+		WHEN 'Retail' THEN 'Unichem New Lynn-R'
+		ELSE 'Unknown'  
+	END as [Store Name],
 	drug.BrandName as [Brand],
 	drug.GenericName as [Generic Name],
 	drug.Strength as [Strength],
@@ -17,6 +21,5 @@ inner join dbo.BrandDrugs as drug on drug.SpecifiedPackPharmacode = stockCard.Ph
 where (getdate() - 180) > cast(stockCard.LastSaleDate as datetime)
 and (getdate() - 1095) < cast(stockCard.LastSaleDate as datetime)
 and stockCard.SOH between 0.001 and 1000
-and stockPoint.name like '%DISP'
 and drug.AverageWholeSalePrice >= 100
 order by [SOH Value] DESC
