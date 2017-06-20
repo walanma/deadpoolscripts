@@ -3,7 +3,7 @@ SET NOCOUNT ON
 select
 	CASE stockPoint.Name 
 		WHEN 'Dispensary' THEN 'Unichem Russell Street'
-		WHEN 'Retail' THEN 'Unichem Russell Street'
+		WHEN 'Retail' THEN 'Unichem Russell Street-R'
 		ELSE 'Unknown'  
 	END as [Store Name],
 	drug.BrandName as [Brand],
